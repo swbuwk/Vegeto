@@ -1,12 +1,14 @@
+let SH = 1.3 * document.documentElement.scrollHeight
+
 let vegs = [
-    {name: "broccoli", left:80, top:110},
-    {name: "carrot", left:30, top:150},
-    {name: "tomato", left:15, top:210},
-    {name: "celery", left:65, top:240},
-    {name: "onion", left:10, top:300},
-    {name: "cucumber", left:80, top:310},
-    {name: "tomato", left:55, top:360},
-    {name: "parsley", left:20, top:400},
+    {name: "broccoli", left:75, top:0.25 * SH},
+    {name: "carrot", left:30, top:0.37 * SH},
+    {name: "tomato", left:15, top:0.52 * SH},
+    {name: "celery", left:65, top:0.6 * SH},
+    {name: "onion", left:10, top:0.75 * SH},
+    {name: "cucumber", left:70, top:0.85 * SH},
+    {name: "tomato", left:40, top:0.9 * SH},
+    {name: "parsley", left:20, top: SH},
 ]
 
 //add vegetables to the page
@@ -14,7 +16,7 @@ for (i of vegs) {
     let veg = document.createElement("div")
     veg.classList.add("vegetable")
     veg.style.left = "" + i.left + "%"
-    veg.style.top = "" + i.top + "%"
+    veg.style.top = "" + i.top + "px"
     veg.style.width = veg.style.height ="" + (Math.random()*50 + 150) + "px"
     document.querySelector("#vegetables").appendChild(veg)
 
