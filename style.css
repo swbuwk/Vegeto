@@ -222,6 +222,107 @@ footer {
     display: flex;
 }
 
+.dark-bg {
+    position: fixed;
+    top:0%;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0);
+    z-index: 3;
+    animation: 0.7s darkScreen;
+}
+
+@keyframes darkScreen {
+    from {
+        background-color: rgba(0, 0, 0, 0);
+    }
+    to {
+        background-color: rgba(0, 0, 0, 0.4);
+    }
+}
+
+.reg-menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    width: 0px;
+    height: 0px;
+    aspect-ratio: 7 / 8;
+    background-color: #FEAA00;
+    border-radius: 15px;
+    z-index: 4;
+    animation: 0.7s showMenu;
+    box-shadow: 15px 15px #38282a;
+}
+
+
+@keyframes showMenu {
+    from {
+        width: 0px;
+        height: 0px;
+    }
+    to {
+        width: 700px;
+        height: 800px;
+    }
+}
+
+.reg-title {
+    color: #38282a;
+    font-size: 60px;
+}
+
+.opacity-container {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    opacity: 0%;
+    animation: 0.3s changeOpacity;
+}
+
+@keyframes changeOpacity {
+    from {
+        opacity: 0%;
+    }
+    to {
+        opacity: 100%;
+    }
+}
+
+.input-cont {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 35px;
+}
+
+.input-cont label {
+    margin-bottom: 10px;
+}
+
+.input {
+    width: 80%;
+    height: 40px;
+    font-size: 30px;
+    border-radius: 10px;
+    border: 3px solid #38282a;
+    outline: none;
+    font-family: 'Lato', sans-serif;
+    color: #312426;
+    margin-bottom: 20px;
+}
+
+.input:focus {
+
+}
+
 @media screen and (max-width: 1250px) {
     .main-block {
         display: flex;
