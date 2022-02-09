@@ -250,6 +250,8 @@ footer {
     margin: auto;
     width: 0px;
     height: 0px;
+    max-height: 90vh;
+    max-width: 90vw;
     aspect-ratio: 7 / 8;
     background-color: #FEAA00;
     border-radius: 15px;
